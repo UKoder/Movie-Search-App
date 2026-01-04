@@ -71,7 +71,7 @@ async function loadMovies(movieTitle, isGetMoviesFunc){
         const url = `https://www.omdbapi.com/?s=${apiQuery}&apikey=${API_KEY}`;
         const searchListResponse = await fetch(url);
         let moviesList = await searchListResponse.json();
-
+        console.log(moviesList);
 
         if(isGetMoviesFunc){
             return moviesList;
@@ -83,7 +83,7 @@ async function loadMovies(movieTitle, isGetMoviesFunc){
             if(i <= 7){
                 const movieText = document.createElement("p");
                 movieText.innerText = `${movie.Title}, ${movie.Year}`;
-                searchListItems.prepend(movieText);
+                searchListItems.append(movieText);
                 i++;
 
                 movieText.addEventListener("click",()=>{
@@ -107,3 +107,6 @@ close.addEventListener("click",()=>{
     searchBar.value = "";
 })
 
+// improvements
+//add posters in search list
+// add categories
