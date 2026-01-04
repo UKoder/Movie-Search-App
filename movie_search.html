@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UKFLix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="movie_search.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="logo" title="logo: UKFLix" class="logo">
+        </div>
+        <div class="search-container" style="cursor: pointer;">
+            <button class="search-btn" title="Search"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+            <input type="text" name="movie-name" placeholder="Search a Movie" class="search-bar" autocomplete="off">
+            <div class="search-list-items" style="display:none;"></div>
+        </div>
+        <!-- <div class="movie-categories-container">Categories:
+            <select name="categories" id="movie-category">
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <option value="Crime">Crime</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Adventure">Adventure</option>
+            </select>
+        </div> -->
+        <div class="profile-container">
+            <img src="profile.png" alt="profile-pic" title="Profile-Pic" class="profile-pic" style="cursor: pointer;">
+        </div>
+    </div>
+    <div class="js-hide-me">
+        <div class="sidebar">
+            <button title="Home"><i class="fa-solid fa-house fa-xl" style="color: red;"></i>
+                <p>Home</p>
+            </button>
+            <button title="Explore"><i class="fa-brands fa-wpexplorer fa-xl" style="color:blue;"></i>
+                <p>Explore</p>
+            </button>
+            <button title="Trending"><i class="fa-solid fa-fire fa-xl" style="color: orange;"></i>
+                <p>Trending</p>
+            </button>
+            <button title="Top-Rated"><i class="fa-solid fa-list-ol fa-xl" style="color:blue;"></i>
+                <p>Top-Rated</p>
+            </button>
+            <button title="Favourites"><i class="fa-solid fa-heart fa-xl" style="color: red;"></i>
+                <p>Favourites</p>
+            </button>
+        </div>
+        <h1 style="margin-top:120px; margin-left: 120px;"><u>Top Rated IMDB Movies Of all Time</u></h1>
+        <div class="movie-cards">
+            <div class="movie-card-1">
+                <div class="thmubnail-container">
+                    <img src="imgs/thumbnail1.png" alt="" class="movie-thumbnail">
+                </div>
+                <div class="movie-title-container">
+                    <p class="movie-title"><i class="fa-solid fa-play" style="color: red;"></i>Shawshank Redemption
+                    </p>
+                </div>
+                <div class="movie-rating-container">
+                    <p class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i>9.3/10</p>
+                </div>
+            </div>
+            <div class="movie-card-2">
+                <div class="thmubnail-container">
+                    <img src="imgs/thumbnail2.png" alt="" class="movie-thumbnail">
+                </div>
+                <div class="movie-title-container">
+                    <p class="movie-title"><i class="fa-solid fa-play" style="color: red;"></i>The Godfather</p>
+                </div>
+                <div class="movie-rating-container">
+                    <p class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i>9.2/10</p>
+                </div>
+            </div>
+            <div class="movie-card-3">
+                <div class="thmubnail-container">
+                    <img src="imgs/thumbnail3.png" alt="" class="movie-thumbnail">
+                </div>
+                <div class="movie-title-container">
+                    <p class="movie-title"><i class="fa-solid fa-play" style="color: red;"></i>The Dark Knight</p>
+                </div>
+                <div class="movie-rating-container">
+                    <p class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i>9.1/10</p>
+                </div>
+            </div>
+            <div class="movie-card-4">
+                <div class="thmubnail-container">
+                    <img src="imgs/thumbnail4.png" alt="" class="movie-thumbnail">
+                </div>
+                <div class="movie-title-container">
+                    <p class="movie-title"><i class="fa-solid fa-play" style="color: red;"></i>The Godfather: Part
+                        II
+                    </p>
+                </div>
+                <div class="movie-rating-container">
+                    <p class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i>9.0/10</p>
+                </div>
+            </div>
+            <div class="movie-card-5">
+                <div class="thmubnail-container">
+                    <img src="imgs/thumbnail5.png" alt="" class="movie-thumbnail">
+                </div>
+                <div class="movie-title-container">
+                    <p class="movie-title"><i class="fa-solid fa-play" style="color: red;"></i>Angry Men</p>
+                </div>
+                <div class="movie-rating-container">
+                    <p class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i>9.0/10</p>
+                </div>
+            </div>
+            <div class="movie-card-6">
+                <div class="thmubnail-container">
+                    <img src="imgs/thumbnail6.png" alt="" class="movie-thumbnail">
+                </div>
+                <div class="movie-title-container">
+                    <p class="movie-title"><i class="fa-solid fa-play" style="color: red;"></i>The Lord Of The
+                        Rings:
+                        The
+                        Return Of The King</p>
+                </div>
+                <div class="movie-rating-container">
+                    <p class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i>9.0/10</p>
+                </div>
+            </div>
+            <div class="movie-card-7">
+                <div class="thmubnail-container">
+                    <img src="imgs/thumbnail7.png" alt="" class="movie-thumbnail">
+                </div>
+                <div class="movie-title-container">
+                    <p class="movie-title"><i class="fa-solid fa-play" style="color: red;"></i>Schindler's List</p>
+                </div>
+                <div class="movie-rating-container">
+                    <p class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i>9.0/10</p>
+                </div>
+            </div>
+            <div class="movie-card-8">
+                <div class="thmubnail-container">
+                    <img src="imgs/thumbnail8.png" alt="" class="movie-thumbnail">
+                </div>
+                <div class="movie-title-container">
+                    <p class="movie-title"><i class="fa-solid fa-play" style="color: red;"></i>The Lord Of The
+                        Rings: The Fellowship Of The Ring</p>
+                </div>
+                <div class="movie-rating-container">
+                    <p class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i>8.9/10</p>
+                </div>
+            </div>
+            <div class="movie-card-9">
+                <div class="thmubnail-container">
+                    <img src="imgs/thumbnail9.png" alt="" class="movie-thumbnail">
+                </div>
+                <div class="movie-title-container">
+                    <p class="movie-title"><i class="fa-solid fa-play" style="color: red;"></i>Pulp Fiction</p>
+                </div>
+                <div class="movie-rating-container">
+                    <p class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i>8.8/10</p>
+                </div>
+            </div>
+            <div class="movie-card-10">
+                <div class="thmubnail-container">
+                    <img src="imgs/thumbnail10.png" alt="" class="movie-thumbnail">
+                </div>
+                <div class="movie-title-container">
+                    <p class="movie-title"><i class="fa-solid fa-play" style="color: red;"></i>The Good, The Bad and
+                        The
+                        Ugly</p>
+                </div>
+                <div class="movie-rating-container">
+                    <p class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i>8.8/10</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="movie-summary-title" style="display: none;">
+        <h1></h1>
+    </div>
+    <div class="movie-summary" style="display:none;">
+        <div><img src="" alt="" class="movie-poster"></div>
+        <div class="movie-text">
+            <p class="movie-summary-year"></p>
+            <p class="movie-cast"></p>
+            <p class="movie-awards"></p>
+            <p class="movie-box-office"></p>
+            <p class="movie-director"></p>
+            <p class="movie-genre"></p>
+            <p class="movie-rated"></p>
+            <p class="movie-language"></p>
+            <p class="movie-summary-imdb-rating"></p>
+            <button><i class="fa-solid fa-xmark" style="color: red;"></i>Close</button>
+        </div>
+    </div>
+</body>
+
+<script src="movie_search.js" type="module"></script>
+
+</html>
