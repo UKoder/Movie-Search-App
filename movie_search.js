@@ -71,7 +71,6 @@ async function loadMovies(movieTitle, isGetMoviesFunc){
         const url = `https://www.omdbapi.com/?s=${apiQuery}&apikey=${API_KEY}`;
         const searchListResponse = await fetch(url);
         let moviesList = await searchListResponse.json();
-        console.log(moviesList);
 
         if(isGetMoviesFunc){
             return moviesList;
@@ -95,7 +94,9 @@ async function loadMovies(movieTitle, isGetMoviesFunc){
         return moviesList;
     }
     catch(error){
-        console.log(error);
+        const movieText = document.createElement("p");
+        movieText.innerText = "...";
+        searchListItems.append(movieText);
     }
 }
 
